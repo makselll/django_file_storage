@@ -1,0 +1,688 @@
+@import "bootstrap.css";
+
+.top_menu a{
+    color: black
+}
+.top_menu a:hover {
+        color: black;
+}
+.main a{
+    color: black;
+}
+
+.top_menu a.nav-link.dropdown-toggle{
+    font-size: 12.5px;
+    background-image: url(../img/3toch.png);
+    background-position: center;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 30px;
+    padding-bottom: 15px;
+}
+
+.top_menu .dropdown-toggle::after {
+    display: none;
+}
+
+.under_logo{
+    position: static;
+
+}
+
+._megaMenu{
+    position: static;
+}
+
+.dropdown-menu.mega{
+    top: auto;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 5px;
+    border-color: black;
+    width: 100%;
+    z-index: 2000;
+}
+
+.dropdown-menu.mega div.col-3 {
+    padding-top: 10px;
+    font-size: 12px;
+    padding-bottom: 20px;
+
+}
+
+.dropdown-menu.mega div.col-4 {
+    padding-top: 10px;
+    font-size: 12px;
+    padding-bottom: 40px;
+
+}
+
+.dropdown-item{
+    padding: 2px;
+}
+
+.navbar{
+    font-size: 12.5px;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.img_right_menu{
+    height: 17px;
+    width: 17px;
+    align-self: center;
+    margin-right: -5px;
+    margin-bottom: 2px;
+}
+
+.img_logo{
+    height: 85px;
+    width: 85px;
+    display: flex;
+    margin: auto;
+}
+
+
+ .d-flex>.dropdown:hover>.dropdown-menu {
+    display: block;
+ }
+
+.top_menu button.btn.dropdown-toggle {
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    font-weight: 350;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+hr{
+    border: none;
+    background-color: gray; 
+    color: gray; 
+    height: 1.4px; 
+    opacity: 0.4;
+}   
+
+div.center_menu_under_promo{
+    font-size: 12px;
+}
+
+.promo-1{
+    padding-bottom: 25px;
+}
+
+.promo-2{
+    padding-bottom: 25px;
+}
+
+.promo-3{
+    padding-bottom: 25px;
+}
+
+.promo-4_5{
+    padding-bottom: 25px;
+}
+
+.main_image{
+    position:relative;
+}
+
+.right_img{
+    position:relative;
+}
+
+.left_img{
+    position:relative;
+}
+
+.main .button_on_promo a {
+    position:absolute;
+    top: 90%;
+    left: 43%;
+    text-align:center;
+    width: 8em;
+    height: 2em;
+    padding: 4px;
+    background-color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 17x;
+
+  }
+
+.right_img a{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 8em;
+    background-color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 17x;
+    height: 2em;
+    padding: 4px;
+}
+
+.left_img a{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 8em;
+    background-color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 17x;
+    height: 2em;
+    padding: 4px;
+}
+.button_on_promo_left_right{
+    position:absolute;
+    top: 90%;
+    left: 35%;
+    text-align:center;
+    
+}
+
+.footer{
+    background-color:#1a1a1a;
+    height: 460px;
+    padding-top: 25px;
+}
+
+.footer_header{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.footer_header:hover {
+    color: white
+}
+
+.footer_text_block{
+    padding-top: 5px;
+    color: white;
+    font-size: 12px;
+    width: 220px;
+}
+
+.footer_top_block_btn{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 65%;
+    background-color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    height: 30px;
+    padding-top: 3px;
+    margin-top: 10px;
+}
+
+.lolo a{
+    color: black;
+}
+
+.footer_text_block a:hover {
+    color: white
+}
+
+.footer_text_block a {
+    color :#c8c8c8;
+}
+
+.footer_top_text_block {
+    padding-bottom: 40px;
+}
+
+.img_social{
+    width: 30px; 
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer_social_block{
+    padding-bottom: 40px;
+}
+
+.text_under_social_block{
+    color: white;
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer_logo img{
+    width: 85px; /* you can use % */
+    height: auto;
+
+}
+
+
+.top_menu .btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+    background: white !important;
+ }
+
+
+.dropdown-item a:hover{
+    background: black;
+}
+.list-group-item{
+    color: rgb(63, 63, 63);
+    border-bottom-color: black;
+    font-size: 13px;
+}
+
+.card-header{
+    font-size: 14px;
+    background-color: white;
+    border: none;
+}
+
+.card{
+    border: none;
+}
+
+.col-2.left_position a:hover{
+    color: rgb(63, 63, 63);
+}
+h1{
+    text-align: left;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+
+.row.under_items.some-class{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    padding: 15px 0 15px;
+  }
+
+.under_items{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+
+}
+
+a:hover{
+    text-decoration: none;
+}
+.row.under_items .btn.btn-secondary.dropdown-toggle{
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 13px;
+
+}
+
+.item_descripton p{
+    color: black;
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+.item_descripton{
+    padding-top: 20px;
+    padding-bottom:40px;
+
+}
+
+.item_image{
+    height: 770px;
+    width: 400px;
+}
+
+img.item_first_image{
+    opacity: 0;
+    position: absolute;
+    height: 480px;
+    width: 320px;
+    
+}
+
+img.item_second_image{
+    height: 480px;
+    width: 320px;
+}
+
+
+img.item_first_image:hover{
+    opacity: 1;
+}
+
+.row.items{
+    margin-top: 25px;
+}
+
+
+.btn.btn-outline-success{
+    color: black;
+    border-color:  #ced4da;
+}
+.btn.btn-outline-success:hover{
+    color: black;
+    border-color:  #ced4da;
+    background: none;
+}
+
+.btn.btn-outline-success:active{
+    color: black;
+    border-color:  black;
+    background: none;
+    border-inline-color: #091827;
+    
+}
+
+.form-check-label{
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.form-check-input{
+    margin-left: -10px;
+}
+
+.dropdown-menu.for_radio{
+    width: 180px;
+}
+
+a.type_item{
+    padding-left: 10px;
+    padding-right: 3px;
+    color: black;
+    font-size: 14px;
+}
+
+span.type_item_count:not([href]):not([tabindex]){
+    font-size: 12px;
+    color: rgb(116, 116, 116);
+}
+
+.dropdown-menu.type_item{
+    width: 200px;
+}
+
+.color_boxes{
+    margin-top: 10px;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    outline: 1px solid rgb(197, 197, 197);
+
+}
+
+.color_boxes a{
+    display: block; /* Ссылка как блочный элемент */
+    text-align: center; /* Выравнивание по центру */
+    height: 100%; /* Высота на весь слой */
+}
+
+.color_boxes_menu{
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    text-align: center;
+    align-self: auto;
+    outline: 1px solid rgb(197, 197, 197);
+}
+.pp{
+    padding-left: 10px;
+}
+
+.row.pl-2.align-items-center>a{
+    display: block
+}
+
+a.gray_text{
+    font-size: 15px;
+    margin-right: 10px;
+    opacity: 0.7;
+    font-weight: 500;
+
+}
+
+.form.for_change_items input.form-check-input[type=radio] {
+    display: none;
+}
+
+.form-check.p-0 {
+    text-align: end;
+}
+
+
+img.first_image.for_changing{
+    position: absolute;
+    opacity: 0;
+    height: 640px;
+    width:426px;
+    overflow: hidden;
+    
+}
+
+img.second_image.for_changing{
+    height: 640px;
+    width:426px;
+}
+
+
+img.first_image.for_changing:hover{
+    opacity: 1;
+}
+
+.col-3.paginationn{
+    display: flex;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+.col-3.paginationn a.button7 {
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding: .3em 3em calc(.3em + 3px);
+    border-radius: 3px;
+    background: #1a1a1a;
+    box-shadow: 0 -3px rgb(21, 24, 22) inset;
+    transition: 0.2s;
+      } 
+.col-3.paginationn a.button7:hover {
+    background: rgb(43, 43, 43)
+}
+.col-3.paginationn a.button7:active {
+    background: rgb(43, 43, 43);
+    box-shadow: 0 3px rgb(43, 43, 43) inset;
+}
+
+.col-3.item{
+    padding-bottom: 50px;
+}
+
+.col-4.item{
+    padding-bottom: 50px;
+}
+
+.about_item img{
+    width: 500px;
+    height: 753px;
+    margin-right: 15px;
+}
+
+.item_description{
+    height: 300px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+
+}
+
+.under_desc{
+    width:700px;
+    font-size: 12px;
+    opacity: 0.9;
+    letter-spacing: 1.2px;
+}
+
+.right_menu{
+    height: 500px;
+    padding-top:20px;
+    background-color: white;
+}
+
+.right_menu h1{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.col-4.align-self-start.right_menu{
+    position: sticky;
+    top: 0;
+}
+
+.models_block{
+    padding-top:20px;
+}
+
+.models_block img {
+    height: 78px;
+    width: 52px;
+}
+
+
+.form-check.models input[type="radio"] {
+    display: none;
+}
+
+.form-check-label.borderr{
+    outline: 2px solid black;
+}
+
+.all_models{
+    display: flex;
+}
+
+.all_models label{
+    padding: 0;
+    margin: 0 12px 0 0;
+}
+
+.form-check-label.mr-2.p-0.borderr{
+    outline: 2px solid black;
+}
+
+.form-check.models .checked {
+    outline: 2px solid black;
+}
+
+.form-check.models {
+    padding: 0;
+}
+
+.dropdown.size{
+    padding-top:30px; 
+    
+}
+
+.dropdown.size img{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.dropdown.size button:focus +img{
+    opacity: 1;
+}
+
+.dropdown.size button{
+    color: black;
+    background-color: white;
+    border-radius: 0;
+    padding: 10px 40px  10px 0;
+}
+
+.dropdown.size button:hover{
+    background: rgb(221, 221, 221);
+    color: black
+}
+
+.dropdown.size button:active{
+    outline: none !important;
+    box-shadow: none;
+    background-image: url(../img/3toch.png);
+}
+
+.dropdown.size button:focus{
+
+    color: gray;
+    outline: none !important;
+    box-shadow: none;
+    background-image: url(../img/3toch.png);
+    
+}
+
+
+
+.btn.btn-secondary.for_size{
+    width: 380px;
+
+    font-size: 12.5px;
+    padding-left: 10px;
+    text-align: left ;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu.size{
+    width: 380px;
+}
+
+.dropdown-menu.size a{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 9px 40px  9px 10px;
+    
+}
+
+.dropdown-menu.size.show{
+    border-top:0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+
+}
+
+.button_buy{
+    padding: 20px 0 0 0;
+}
+
+.button_buy button{
+    padding: 9px 0 9px 0;
+    border-radius: 0;
+    text-align: center;
+    width: 380px;
+    font-size: 12.5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #272829;
+}
+
+.button_buy button:hover{
+    background: #3c3d3f;
+}
+
+td.cart_image img{
+
+    width: 200px;
+    height: 200px;
+}
