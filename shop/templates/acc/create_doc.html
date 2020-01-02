@@ -2,27 +2,10 @@
 
 {% block main %}
 
-<form action ="{% url "save_doc" %}" method = "post">
-{% csrf_token %}
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <dib class="col-12">Title: <input type="text" name = "title" ><br></dib>
-        <dib class="col-12">File:
-            {% for i in form %}
-                {{i}}
-            {% endfor %}
-            <br></dib>
-        <dib class="col-12">Description: <textarea  name="description" ></textarea><br></dib>
-        <dib class="col-12">Private: <select name ="private"><br>
-  <option value = "True">True</option>
-  <option value = "False">False</option>
-</select></dib>
-    </div>
-</div>
-
-
-
-<input type="submit" >
+<form  method = "post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
 
 </form>
 

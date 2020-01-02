@@ -11,53 +11,39 @@
     <div class="col-2">Document title</div>
     <div class="col-2">Private</div>
     <div class="col-2">Change private</div>
-    <div class="col">Documnet description ( нажми на описание)</div>
+    <div class="col">Documnet description</div>
     <div class="col-1"></div>
   </div>
 
 
   {% for document in mydocuments %}
 
-  <div class="row text-center pb-3">
-    <div class="col-1">{{document.title}}</div>
-    <div class="col-2">{{document.file.name}}<br></div>
-    <div class="col-2">{{document.private}}</div>
-    <div class="col-2">
-      <form  action="{% url "update_document" document.id %}" href="edit" method = "post">
-      {% csrf_token %}
-        <select name="privat">
-          <option value="True" >True</option>
-          <option value="False">False</option>
-        </select>
-        <input type="Submit">
-      </form>
-    </div>
-    <div class="col"> 
-    
-      <a   data-toggle="collapse" data-target="#{{document.title}}" aria-controls="{{document.title}}" >
-        {{document.description}}
-      </a>
-        
-    </div>
-    <div class="col-1">
-      <form  action="{% url "delete_document" document.id %}" href="delete" method = "post">
-        {% csrf_token %}
-        <input type="submit" value ="Delete">
-      </form>
-    </div>
-    <div class="col-12">
-      <div class="collapse" id="{{document.title}}">
-      <form  action="{% url "update_document" document.id %}" method = "post", name = "priv">
-      {% csrf_token %}
-        <textarea class="w-100" name="description" >{{document.description}}</textarea>
-        <input type="Submit">
-      </form>
-      </div>
-    </div>
-    
-  </div>
+      <div class="row text-center pb-3">
+                    <form style="display: contents;" action="{% url 'update_document' document.id %}" href="edit" method = "post">
+          {% csrf_token %}
+          <div class="col-1">{{document.title}}</div>
+          <div class="col-2">{{document.file.name}}<br></div>
+          <div class="col-2">{{document.private}}</div>
 
-</div>
+          <div class="col-2">
+                <select name="privat">
+                  <option value="True" >True</option>
+                  <option value="False">False</option>
+                </select>
+                <input type="Submit">
+          </div>
+          <div class="col">
+              <textarea class="w-100" name="desc" >{{document.description}}</textarea>
+          </div>
+          </form>
+          <div class="col-1">
+            <form  action="{% url 'delete_document' document.id %}" href="delete" method = "post">
+              {% csrf_token %}
+              <input type="submit" value ="Delete">
+            </form>
+          </div>
+      </div>
+
 {% endfor %}
 <div class="container-fluid pt-5">
   <div class="row justify-content-center">
@@ -67,10 +53,4 @@
 </a>
   </div>
 </div>
-
-
-
-
-
 {% endblock main%}
-

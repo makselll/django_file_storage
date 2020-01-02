@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_list_or_404
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from .models import *
-from .forms import *
+from .forms import UploadFileForm
 from home.views import *
 
 
@@ -58,21 +58,24 @@ def register(request):
 
 def profile(request):
     mydocuments = Document.objects.all().filter(user = auth.get_user(request))
-    return render(request, 'acc/profile.html', context={'mydocuments':mydocuments})
+    return render(request, 'acc/profile.html', context={'mydocuments': mydocuments})
 
 
 def update_document(request, id = None):
-    document = Document.objects.get(id = id)
+    document = Document.objects.get(id=id)
+    print(document)
+    print(request.POST)
     privat = request.POST.get('privat')
-    description = request.POST.get('description')
+    description = request.POST.get('desc')
     document.private = privat
     document.description = description
     document.save()
     return redirect('/acc/profile')
 
 
-def delete_document(request, id = None):
-    document = Document.objects.get(id = id).delete()
+def delete_document(request, id=None):
+    print(id)
+    Document.objects.get(id = id).delete()
     return redirect('/acc/profile')
 
 
@@ -99,12 +102,15 @@ def update_points(request, id = None):
 
 def save_doc(request):
     if request.method == 'POST':
-        file = f'documents/' + request.POST.get('file')
-        title = request.POST.get('title')
-        description = request.POST.get('description')
-        private = request.POST.get('private')
-        Document.objects.create(title = title, user = auth.get_user(request),file = file,  description = description, private = private, score = 0 )
-        return redirect('/acc/profile')
+        form = UploadFileForm(request.POST, request.FILES)
+        print(form.errors)
+        if form.is_valid():
+            title = form.cleaned_data['title']
+            file = form.cleaned_data['file']
+            description = form.cleaned_data['description']
+            private = form.cleaned_data['private']
+            Document.objects.create(title=title, user=auth.get_user(request), file=file, description=description, private=private, score=0)
+            return redirect('/acc/profile')
     else:
         form = UploadFileForm()
     return render(request, 'acc/create_doc.html', {'form': form})

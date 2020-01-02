@@ -10,11 +10,9 @@ class Document(models.Model):
     private = models.BooleanField('Приватный ?', null= True)
     score = models.IntegerField('рейтинг', null= True,default=0)
 
-
     def view_count(self):
 
         return sum([i.value for i in PostLikes.objects.filter(document=self)])
-
 
     class Meta:
         verbose_name= ':Документы'
@@ -22,6 +20,7 @@ class Document(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class PostLikes(models.Model):
     user = models.ForeignKey(User, on_delete= models.CASCADE, related_name='like_user')
