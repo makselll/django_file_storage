@@ -1,0 +1,43 @@
+{% extends '_base.html' %}
+{% load static %}
+
+
+{% block content%}
+  <h1 class="text-center py-3"> All documents </h1>
+
+  <div class="row text-center pb-3 ">
+    <div class="col-1">Score</div>
+    <div class="col-1">Username</div>
+    <div class="col-2">Document title</div>
+    <div class="col">Documnet description</div>
+    <div class="col-3"></div>
+  </div>
+
+  {% for document in document_list %}
+  <div class="row text-center mb-3 ">
+    <div class="col-1">
+
+        <form  action="{% url "update_points" document.id %}" href="points" method = "post">
+          {% csrf_token %}
+          {% if user.is_authenticated %}
+            <input type="submit" name="point" value ="-1">
+          {% endif %}
+          {{document.view_count}}
+          {% if user.is_authenticated %}
+          <input type="submit" name="point" value ="1">
+          {% endif %}
+        </form>
+
+    </div>
+    <div class="col-1">{{document.user}}</div>
+    <div class="col-2">{{document.title}}</div>
+    <div class="col">{{document.description}}</div>
+    <div class="col-2">{{document.file.name}}<br></div>
+    <div class="col-1">
+     <a  href="{{document.file.url}}" Download> Download</a>
+    </div>
+  </div>
+
+{% endfor %}
+{% endblock content %}
+

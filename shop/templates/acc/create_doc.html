@@ -1,14 +1,13 @@
-{% extends 'home/home.html' %}
+{% extends '_base.html' %}
 
-{% block main %}
+{% block content %}
 
-<form  method = "post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-
+    {{ form.as_p }}
+    <input type="submit" value="Save">
 </form>
 
 
-{% endblock main%}
+{% endblock content %}
 

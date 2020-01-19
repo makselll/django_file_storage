@@ -4,10 +4,10 @@ from django.contrib.auth.models import User
 
 class Document(models.Model):
     title = models.CharField('Название документа', max_length=200)
-    user = models.ForeignKey(User, on_delete= models.CASCADE, related_name='doc_user')
-    file = models.FileField('Файл', upload_to="documents")
+    user = models.ForeignKey(User, on_delete= models.CASCADE, related_name='doc_user', null= True)
+    file = models.FileField('Файл', upload_to="static/documents")
     description = models.CharField('Краткое описание', max_length=400)
-    private = models.BooleanField('Приватный ?', null= True)
+    private = models.BooleanField(null= True)
     score = models.IntegerField('рейтинг', null= True,default=0)
 
     def view_count(self):
